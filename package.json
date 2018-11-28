@@ -1,0 +1,31 @@
+{
+  "name": "scenario-bus-fe-console",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/scenario-bus/scenario-bus-fe-console.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/scenario-bus/scenario-bus-fe-console/issues"
+  },
+  "homepage": "https://gitlab.com/scenario-bus/scenario-bus-fe-console#readme",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.9.1",
+    "babel-plugin-transform-define": "^1.3.0",
+    "next": "^7.0.2",
+    "pm2": "^3.2.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "styled-components": "^4.1.1",
+    "universal-cookie": "^3.0.6"
+  }
+}
