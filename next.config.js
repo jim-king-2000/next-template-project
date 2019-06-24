@@ -1,5 +1,6 @@
-const prod = process.env.NODE_ENV === 'production';
+const withTM = require('next-transpile-modules');
 
-module.exports = {
-  assetPrefix: prod ? '' : '',
-}
+module.exports = withTM({
+  transpileModules: [
+  ]
+});
