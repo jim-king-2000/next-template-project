@@ -21,16 +21,22 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-decorators": "^7.4.4",
+    "array.prototype.flat": "^1.2.1",
     "babel-plugin-styled-components": "^1.10.0",
+    "computed-async-mobx": "^4.1.1",
     "externalSDK": "git+https://gitlab.com/location-service-backbone/externalSDK.git",
+    "fe-fireeye-components": "git+https://gitlab.com/location-service-fireeye/fe-fireeye-components.git",
     "grommet": "^2.7.1",
     "mobx": "^5.10.1",
     "mobx-react": "^6.1.1",
+    "mobx-utils": "^5.4.1",
     "next": "^8.1.0",
     "next-transpile-modules": "^2.3.1",
     "pm2": "^3.5.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-icons": "^3.7.0",
+    "socket.io-client": "^2.2.0",
     "styled-components": "^4.3.1",
     "universal-cookie": "^4.0.0"
   }

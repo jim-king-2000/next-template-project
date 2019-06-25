@@ -3,6 +3,7 @@ import { Grommet, Box } from 'grommet';
 import { ThingManagementClient } from 'externalSDK';
 import { appId, authorization } from '../components/account';
 import Sidebar from '../components/Sidebar';
+import MapCanvas from '../components/MapCanvas';
 import VehicleStore from '../components/VehicleStore';
 
 const client = new ThingManagementClient();
@@ -13,7 +14,6 @@ export default class extends Component {
   static async getInitialProps() {
     const resp = await client.listThing({ appId, authorization });
     const vehicles = await resp.json();
-    console.log(vehicles)
     return { vehicles };
   }
 
@@ -21,7 +21,7 @@ export default class extends Component {
     <Grommet full plain>
       <Box fill direction='row'>
         <Sidebar store={this.state} />
-        ByteBilling front-end sample project
+        <MapCanvas store={this.state} />
       </Box>
     </Grommet>
   );
