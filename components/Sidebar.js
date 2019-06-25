@@ -7,7 +7,7 @@ export default observer(({ store, ...props }) => (
       <CheckBox
         key={v.thingId}
         label={v.thingName}
-        checked={v.enabled || false}
+        checked={!!v.enabled}
         onChange={e => v.enabled = e.target.checked} />)}
   </Box>
 ));
