@@ -6,7 +6,7 @@ import { Vehicles } from 'fe-fireeye-components/components';
 @observer
 export default class extends Component {
   render() {
-    const things = this.props.store.positions.value;
+    const things = this.props.store.positions;
     console.log(things)
     return (
       <Box flex={{ grow: 1, shrink: 1 }}>
