@@ -5,7 +5,6 @@ module.exports = withTM({
     'externalSDK',
     'location-backbone-canvas',
     'location-backbone-fe',
-    'location-backbone-store',
-    'fe-fireeye-components/components'
+    'location-backbone-store'
   ]
 });
