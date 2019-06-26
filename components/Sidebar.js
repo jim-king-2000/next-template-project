@@ -8,6 +8,6 @@ export default observer(({ store, ...props }) => (
         key={v.thingId}
         label={v.thingName}
         checked={!!v.enabled}
-        onChange={e => v.enabled = e.target.checked} />)}
+        onChange={e => store.pickVehicle(v, e.target.checked)} />)}
   </Box>
 ));
