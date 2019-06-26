@@ -1,4 +1,5 @@
 import { observable, autorun } from 'mobx';
+import io from 'socket.io-client';
 import { TsdbClient } from 'externalSDK';
 import { appId, authorization } from './account';
 
@@ -13,6 +14,12 @@ export default class {
         {}, v, await tsdbClient.getLastPosition({ appId, thingId: v.thingId, authorization })
       )));
     });
+    if (typeof window !== 'undefined') {
+      const socket = io('https://locationbackbone.top', { transports: [ 'websocket' ] });
+      socket.on('connect', () => {
+        console.log('Socket.io connected.');
+      });
+    }
   }
 
   @observable vehicles = [];
