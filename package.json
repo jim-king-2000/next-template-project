@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/scenario-bus/scenario-bus-fe-console.git"
+    "url": "git+https://github.com/jim-king-2000/next-template-project.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/scenario-bus/scenario-bus-fe-console/issues"
+    "url": "https://github.com/jim-king-2000/next-template-project/issues"
   },
-  "homepage": "https://gitlab.com/scenario-bus/scenario-bus-fe-console#readme",
+  "homepage": "https://github.com/jim-king-2000/next-template-project#readme",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-decorators": "^7.4.4",
