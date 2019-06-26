@@ -20,7 +20,7 @@ export default class extends Component {
   render = () => (
     <Grommet full plain>
       <Box fill direction='row'>
-        <Sidebar fill='vertical' overflow='auto' store={this.state} />
+        <Sidebar overflow='auto' store={this.state} />
         <MapCanvas store={this.state} />
       </Box>
     </Grommet>
