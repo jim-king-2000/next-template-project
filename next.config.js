@@ -3,7 +3,7 @@ const withTM = require('next-transpile-modules');
 module.exports = withTM({
   transpileModules: [
     'externalSDK',
-    'LocationBackboneStore',
+    'location-backbone-store',
     'fe-fireeye-components/components'
   ]
 });

@@ -27,7 +27,7 @@
     "externalSDK": "git+https://gitlab.com/location-service-backbone/externalSDK.git",
     "fe-fireeye-components": "git+https://gitlab.com/location-service-fireeye/fe-fireeye-components.git",
     "grommet": "^2.7.1",
-    "LocationBackboneStore": "git+https://github.com/jim-king-2000/LocationBackboneStore.git",
+    "location-backbone-store": "git+https://github.com/jim-king-2000/location-backbone-store.git",
     "mobx": "^5.10.1",
     "mobx-react": "^6.1.1",
     "mobx-utils": "^5.4.1",
