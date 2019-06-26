@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grommet, Box } from 'grommet';
-import { ThingManagementClient } from 'externalSDK';
+import { ThingManagementClient } from 'location-backbone-sdk';
 import { VehicleStore } from 'location-backbone-store';
 import { appId, authorization } from '../components/account';
 import Sidebar from '../components/Sidebar';
