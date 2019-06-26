@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Grommet, Box } from 'grommet';
 import { ThingManagementClient } from 'externalSDK';
+import { VehicleStore } from 'LocationBackboneStore';
 import { appId, authorization } from '../components/account';
 import Sidebar from '../components/Sidebar';
 import MapCanvas from '../components/MapCanvas';
-import VehicleStore from '../components/VehicleStore';
 
 const client = new ThingManagementClient();
 
