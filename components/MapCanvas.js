@@ -9,8 +9,9 @@ export default class extends Component {
     const things = this.props.store.positions.slice();
     return (
       <Box flex={{ grow: 1, shrink: 1 }}>
-        <Vehicles mapkey='99c0746b70009d496380367b4f8f8494'
-          things={things} render={this.renderMarker} />
+        <Vehicles
+          mapkey='99c0746b70009d496380367b4f8f8494'
+          things={things} />
       </Box>
     );
   }

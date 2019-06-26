@@ -1,13 +1,8 @@
-import { Box, CheckBox } from 'grommet';
-import { observer } from 'mobx-react';
+import { VehicleSelector } from 'location-backbone-fe';
 
-export default observer(({ store, ...props }) => (
-  <Box {...props}>
-    {store && store.vehicles.map(v =>
-      <CheckBox
-        key={v.thingId}
-        label={v.thingName}
-        checked={!!v.enabled}
-        onChange={e => store.pickVehicle(v, e.target.checked)} />)}
-  </Box>
-));
+export default ({ store, ...props }) => (
+  <VehicleSelector
+    vehicles={store.vehicles}
+    onChange={(v, checked) => store.pickVehicle(v, checked)}
+    {...props} />
+);
