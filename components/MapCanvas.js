@@ -15,23 +15,23 @@ const template = [{
 }, {
   label: '经度',
   property: 'longitude',
-  transform: v => v.toFixed(6)
+  transform: v => v && v.toFixed(6)
 }, {
   label: '纬度',
   property: 'latitude',
-  transform: v => v.toFixed(6)
+  transform: v => v && v.toFixed(6)
 }, {
   label: '速度',
   property: 'speed',
-  transform: v => `${(v * 3.6).toFixed(2)} km/h`
+  transform: v => `${v && (v * 3.6).toFixed(2)} km/h`
 }, {
   label: '高度',
   property: 'altitude',
-  transform: v => `${v.toFixed(2)} m`
+  transform: v => `${v && v.toFixed(2)} m`
 }, {
   label: '精度',
   property: 'accuracy',
-  transform: v => `${v.toFixed(2)} m`
+  transform: v => `${v && v.toFixed(2)} m`
 }];
 
 export default observer(({ store }) => (
