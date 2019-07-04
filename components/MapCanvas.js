@@ -43,11 +43,11 @@ export default observer(({ store }) => (
           click: e => store.selectedVehicle = e.target.getExtData()
         }}
       />
-    <CanvasInformation
-      onClose={() => store.selectedVehicle = undefined}
-      data={store.selectedVehicle}
-      template={template}
-    />
+      <CanvasInformation
+        onClose={() => store.selectedVehicle = undefined}
+        data={store.selectedVehicle}
+        template={template}
+      />
     </CanvasContainer>
   </Box>
 ));
