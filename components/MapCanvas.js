@@ -50,11 +50,11 @@ export default observer(({ store }) => (
       <CanvasPositions
         things={store.positions}
         events={{
-          click: e => store.selectedVehicle = e.target.getExtData()
+          click: e => store.selectedThingId = e.target.getExtData().thingId
         }}
       />
       <CanvasInformation
-        onClose={() => store.selectedVehicle = undefined}
+        onClose={() => store.selectedThingId = undefined}
         data={store.selectedVehicle}
         template={template}
       />
