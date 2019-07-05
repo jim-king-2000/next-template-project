@@ -35,6 +35,9 @@ const template = [{
   label: '精度',
   property: 'accuracy',
   transform: v => `${v && v.toFixed(2)} m`
+}, {
+  label: '光线',
+  property: 'light'
 }];
 
 export default observer(({ store }) => (
