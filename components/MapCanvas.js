@@ -9,6 +9,9 @@ const template = [{
   property: 'timestamp',
   transform: ts => moment(ts).format('YYYY-MM-DD HH:mm:ss')
 }, {
+  label: '名称',
+  property: 'thingName'
+}, {
   label: '状态',
   property: 'isOnline',
   transform: isOnline => isOnline ? '在线' : '离线'
