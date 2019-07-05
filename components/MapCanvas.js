@@ -26,18 +26,22 @@ const template = [{
 }, {
   label: '速度',
   property: 'speed',
-  transform: v => `${v && (v * 3.6).toFixed(2)} km/h`
+  transform: v => `${v && (v * 3.6).toFixed(2)}km/h`
 }, {
   label: '高度',
   property: 'altitude',
-  transform: v => `${v && v.toFixed(2)} m`
+  transform: v => `${v && v.toFixed(2)}m`
 }, {
   label: '精度',
   property: 'accuracy',
-  transform: v => `${v && v.toFixed(2)} m`
+  transform: v => `${v && v.toFixed(2)}m`
 }, {
   label: '光线',
   property: 'light'
+}, {
+  label: '温度',
+  property: 'temp',
+  transform: v => `${v}\u2103`
 }];
 
 export default observer(({ store }) => (
