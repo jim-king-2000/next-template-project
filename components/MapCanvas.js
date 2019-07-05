@@ -1,5 +1,6 @@
 import { observer } from 'mobx-react';
 import { Box } from 'grommet';
+import { LinkUp } from 'grommet-icons';
 import moment from 'moment';
 import { CanvasContainer, CanvasPositions,
   CanvasInformation } from 'location-backbone-canvas';
@@ -42,6 +43,10 @@ const template = [{
   label: '温度',
   property: 'temp',
   transform: v => `${v}\u2103`
+}, {
+  label: '方向',
+  property: 'heading',
+  transform: v => <LinkUp style={{ transform: `rotate(${v}deg)` }} />
 }];
 
 export default observer(({ store }) => (
