@@ -40,13 +40,13 @@ const template = [{
   label: '光线',
   property: 'light'
 }, {
-  label: '温度',
-  property: 'temp',
-  transform: v => `${v}\u2103`
-}, {
   label: '方向',
   property: 'heading',
   transform: v => <LinkUp style={{ transform: `rotate(${v}deg)` }} />
+}, {
+  label: '温度',
+  property: 'temp',
+  transform: v => `${v}\u2103`
 }];
 
 export default observer(({ store }) => (
