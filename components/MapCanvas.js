@@ -37,12 +37,12 @@ const template = [{
   property: 'accuracy',
   transform: v => `${v && v.toFixed(2)}m`
 }, {
-  label: '光线',
-  property: 'light'
-}, {
   label: '方向',
   property: 'heading',
   transform: v => <LinkUp style={{ transform: `rotate(${v}deg)` }} />
+}, {
+  label: '光线',
+  property: 'light'
 }, {
   label: '温度',
   property: 'temp',
