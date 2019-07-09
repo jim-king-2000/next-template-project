@@ -3,7 +3,7 @@ import { Box } from 'grommet';
 import { LinkUp } from 'grommet-icons';
 import moment from 'moment';
 import { CanvasContainer, CanvasPositions,
-  CanvasInformation } from 'location-backbone-canvas';
+  CanvasInformation, PluginZoom } from 'location-backbone-canvas';
 
 const template = [{
   label: '时间',
@@ -63,6 +63,12 @@ export default observer(({ store }) => (
         data={store.selectedVehicle}
         template={template}
       />
+      <PluginZoom
+        direction='row'
+        style={{
+          position: 'absolute',
+          top: 0
+        }} />
     </CanvasContainer>
   </Box>
 ));
