@@ -72,8 +72,8 @@ export default observer(({ store }) => (
         tracingMode={store.tracingMode || false}
         onChange={e => store.tracingMode = e.target.checked} />
       <CanvasReactor
-          markers={store.positions}
-          tracingMode={store.tracingMode || false} />
+        markers={store.positions}
+        tracingMode={store.tracingMode || false} />
     </CanvasContainer>
   </Box>
 ));
