@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import { Box } from 'grommet';
 import { LinkUp } from 'grommet-icons';
@@ -49,31 +50,42 @@ const template = [{
   transform: v => `${v}\u2103`
 }];
 
-export default observer(({ store }) => (
-  <Box flex={{ grow: 1, shrink: 1 }}>
-    <CanvasContainer mapkey='99c0746b70009d496380367b4f8f8494'>
-      <CanvasPositions
-        things={store.positions}
-        events={{
-          click: e => store.selectedThingId = e.target.getExtData().thingId
-        }}
-      />
-      <CanvasInformation
-        onClose={() => store.selectedThingId = undefined}
-        data={store.selectedVehicle}
-        template={template}
-      />
-      <CanvasPluginZoom
-        direction='row'
-        style={{
-          position: 'absolute',
-          top: 0
-        }}
-        tracingMode={store.tracingMode}
-        onChange={e => store.tracingMode = e.target.checked} />
-      <CanvasReactor
-        markers={store.positions}
-        tracingMode={store.tracingMode} />
-    </CanvasContainer>
-  </Box>
-));
+@observer
+export default class extends Component {
+  state = {
+    tracingMode: false,
+    selectedThing: undefined
+   }
+
+  render() {
+    const store = this.props.store;
+    return (
+      <Box flex={{ grow: 1, shrink: 1 }}>
+        <CanvasContainer mapkey='99c0746b70009d496380367b4f8f8494'>
+          <CanvasPositions
+            things={store.positions}
+            events={{
+              click: e => this.setState({ selectedThing: e.target.getExtData() })
+            }}
+          />
+          <CanvasInformation
+            onClose={() => this.setState({ selectedThing: undefined })}
+            data={this.state.selectedThing}
+            template={template}
+          />
+          <CanvasPluginZoom
+            direction='row'
+            style={{
+              position: 'absolute',
+              top: 0
+            }}
+            tracingMode={this.state.tracingMode}
+            onChange={e => this.setState({ tracingMode: e.target.checked })} />
+          <CanvasReactor
+            markers={store.positions}
+            tracingMode={this.state.tracingMode} />
+        </CanvasContainer>
+      </Box>
+    );
+  }
+}
