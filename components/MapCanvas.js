@@ -1,4 +1,5 @@
 import { LinkUp } from 'grommet-icons';
+import { Box } from 'grommet';
 import { observer } from 'mobx-react';
 import moment from 'moment';
 import { CanvasPositionMonitor } from 'location-backbone-canvas';
@@ -48,11 +49,13 @@ const template = [{
 }];
 
 export default observer(({ store }) => (
-  <CanvasPositionMonitor
-    mapKey='99c0746b70009d496380367b4f8f8494'
-    positions={store.positions}
-    selectedThing={store.selectedVehicle}
-    selectThingId={thingId => store.selectedThingId = thingId}
-    propertyTemplate={template}
-  />
+  <Box flex={{ grow: 1, shrink: 1 }}>
+    <CanvasPositionMonitor
+      mapKey='99c0746b70009d496380367b4f8f8494'
+      positions={store.positions}
+      selectedThing={store.selectedVehicle}
+      selectThingId={thingId => store.selectedThingId = thingId}
+      propertyTemplate={template}
+    />
+  </Box>
 ));
