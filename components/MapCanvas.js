@@ -53,8 +53,7 @@ const template = [{
 @observer
 export default class extends Component {
   state = {
-    tracingMode: false,
-    selectedThing: undefined
+    tracingMode: false
    }
 
   render() {
@@ -65,12 +64,12 @@ export default class extends Component {
           <CanvasPositions
             things={store.positions}
             events={{
-              click: e => this.setState({ selectedThing: e.target.getExtData() })
+              click: e => store.selectedThingId = e.target.getExtData().thingId
             }}
           />
           <CanvasInformation
             onClose={() => this.setState({ selectedThing: undefined })}
-            data={this.state.selectedThing}
+            data={store.selectedVehicle}
             template={template}
           />
           <CanvasPluginZoom
