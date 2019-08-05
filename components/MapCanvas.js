@@ -68,7 +68,7 @@ export default class extends Component {
             }}
           />
           <CanvasInformation
-            onClose={() => this.setState({ selectedThing: undefined })}
+            onClose={() => store.selectedThingId =  undefined }
             data={store.selectedVehicle}
             template={template}
           />
