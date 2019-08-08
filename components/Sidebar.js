@@ -1,9 +1,9 @@
 import { Box } from 'grommet';
-import { VehicleSelector } from 'location-backbone-fe';
+import { FlatSelector } from 'location-backbone-fe';
 
 export default ({ store, ...props }) => (
   <Box width='medium'>
-    <VehicleSelector
+    <FlatSelector
       overflow='auto'
       vehicles={store.vehicles}
       onChange={store.pickVehicle}
