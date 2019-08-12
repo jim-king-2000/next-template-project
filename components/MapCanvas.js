@@ -48,9 +48,14 @@ const template = [{
   label: '温度',
   property: 'temp',
   transform: v => typeof v === 'number' && `${v}\u2103`
+}, {
+  label: '湿度',
+  property: 'humidity',
+  transform: v => typeof v === 'number' && `${v}%`
 }];
 
 export default observer(({ store }) => (
+  console.log(store.positions), (
   <Box flex={{ grow: 1, shrink: 1 }}>
     <CanvasPositionMonitor
       mapKey='99c0746b70009d496380367b4f8f8494'
@@ -60,4 +65,4 @@ export default observer(({ store }) => (
       propertyTemplate={template}
     />
   </Box>
-));
+)));
