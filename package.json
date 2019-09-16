@@ -27,6 +27,7 @@
     "grommet": "^2.7.7",
     "isomorphic-unfetch": "^3.0.0",
     "location-backbone-canvas": "git+https://github.com/jim-king-2000/location-backbone-canvas.git",
+    "location-backbone-canvas-bmap": "git+https://github.com/jim-king-2000/location-backbone-canvas-bmap.git",
     "location-backbone-fe": "git+https://github.com/jim-king-2000/location-backbone-fe.git",
     "location-backbone-sdk": "git+https://github.com/jim-king-2000/location-backbone-sdk.git",
     "location-backbone-store": "git+https://github.com/jim-king-2000/location-backbone-store.git",

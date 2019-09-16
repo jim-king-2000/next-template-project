@@ -4,8 +4,12 @@ import { ThingManagementClient } from 'location-backbone-sdk';
 import { PositionStore } from 'location-backbone-store';
 import { appId, authorization } from '../components/account';
 import Sidebar from '../components/Sidebar';
-import MapCanvas from '../components/MapCanvas';
+import dynamic from 'next/dynamic';
 
+const MapCanvas = dynamic(
+  () => import('../components/MapCanvasBMap'),
+  { ssr: false }
+);
 const client = new ThingManagementClient();
 
 export default class extends Component {
