@@ -6,6 +6,8 @@ export default observer(({ store }) => (
   <Box flex={{ grow: 1, shrink: 1 }}>
     <CanvasPositionMonitor
       mapKey='99c0746b70009d496380367b4f8f8494'
+      setFitView={!!store.setFitView}
+      onUpdateEnd={() => store.setFitView = false}
       positions={store.positions}
       selectedThing={store.selectedVehicle}
       selectThingId={thingId => store.selectedThingId = thingId}
