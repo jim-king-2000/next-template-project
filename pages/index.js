@@ -13,7 +13,7 @@ const MapCanvas = dynamic(
 const client = new ThingManagementClient();
 
 export default class extends Component {
-  state = new PositionStore(this.props.vehicles);
+  state = new PositionStore(this.props.vehicles, undefined, 'bd-09');
 
   static async getInitialProps() {
     const resp = await client.listThing({ appId, authorization });
