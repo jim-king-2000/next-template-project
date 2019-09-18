@@ -1,6 +1,6 @@
 import { Box } from 'grommet';
 import { observer } from 'mobx-react';
-import { CanvasPositionMonitor } from 'location-backbone-canvas';
+import { CanvasPositionMonitor } from 'location-backbone-canvas-amap';
 
 export default observer(({ store }) => (
   <Box flex={{ grow: 1, shrink: 1 }}>
