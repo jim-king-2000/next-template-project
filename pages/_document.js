@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
         <Head>
           {this.props.styleTags}
         </Head>
-        <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=ezIVxAYOPRYR8D3iGKsP6jFlqMiuZjTr"></script>
+        <script type='text/javascript' src='http://api.map.baidu.com/api?v=3.0&ak=ezIVxAYOPRYR8D3iGKsP6jFlqMiuZjTr'></script>
         <body>
           <Main />
           <NextScript />
