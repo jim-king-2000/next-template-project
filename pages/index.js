@@ -7,7 +7,7 @@ import Sidebar from '../components/Sidebar';
 import dynamic from 'next/dynamic';
 
 const MapCanvas = dynamic(
-  () => import('../components/MapCanvasBingMap'),
+  () => import('../components/MapCanvasBMap'),
   { ssr: false }
 );
 const client = new ThingManagementClient();
