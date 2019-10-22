@@ -22,9 +22,7 @@ export const CanvasPositions = observer(
           }}
           angle={p.heading}
           extData={p}
-          events={{
-            ...events
-          }}
+          events={events}
           {...props}
         />
       ))}
