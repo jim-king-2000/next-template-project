@@ -21,6 +21,7 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-proposal-private-methods": "^7.6.0",
     "@zeit/next-css": "^1.0.1",
     "array.prototype.flat": "^1.2.2",
     "babel-plugin-styled-components": "^1.10.6",
@@ -32,6 +33,7 @@
     "location-backbone-canvas-bingmap": "git+https://github.com/jim-king-2000/location-backbone-canvas-bingmap.git",
     "location-backbone-canvas-bmap": "git+https://github.com/jim-king-2000/location-backbone-canvas-bmap.git",
     "location-backbone-fe": "git+https://github.com/jim-king-2000/location-backbone-fe.git",
+    "location-backbone-react-map": "git+https://github.com/jim-king-2000/location-backbone-react-map.git",
     "location-backbone-sdk": "git+https://github.com/jim-king-2000/location-backbone-sdk.git",
     "location-backbone-store": "git+https://github.com/jim-king-2000/location-backbone-store.git",
     "mobx": "^5.14.2",

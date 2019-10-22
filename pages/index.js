@@ -7,13 +7,13 @@ import Sidebar from '../components/Sidebar';
 import dynamic from 'next/dynamic';
 
 const MapCanvas = dynamic(
-  () => import('../components/MapCanvasBMap'),
+  () => import('../components/MapCanvasRMap'),
   { ssr: false }
 );
 const client = new ThingManagementClient();
 
 export default class extends Component {
-  state = new PositionStore(this.props.vehicles, undefined, 'bd-09');
+  state = new PositionStore(this.props.vehicles, undefined, 'gcj-02');
 
   static async getInitialProps() {
     const resp = await client.listThing({ appId, authorization });

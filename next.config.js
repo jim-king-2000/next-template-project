@@ -18,7 +18,8 @@ module.exports = withPlugins([
       'location-backbone-canvas-bmap',
       'location-backbone-fe',
       'location-backbone-sdk',
-      'location-backbone-store'
+      'location-backbone-store',
+      'location-backbone-react-map',
     ]
   }],
 ]);
