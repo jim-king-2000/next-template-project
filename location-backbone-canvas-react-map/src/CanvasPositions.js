@@ -1,7 +1,7 @@
 import React from 'react';
 import { DynamicMarker } from 'location-backbone-react-map';
 import { observer } from 'mobx-react';
-import { CarTopViewObject, colorPool } from 'location-backbone-canvas';
+import { CarTopViewObject, ColorPool } from 'location-backbone-canvas';
 
 export const CanvasPositions = observer(
   ({ __map__, positions, events, ...props }) => (
@@ -13,7 +13,7 @@ export const CanvasPositions = observer(
           __map__={__map__}
           key={p.thingId}
           svgIcon={CarTopViewObject}
-          fillColor={colorPool[p.colorIndex % colorPool.length]}
+          fillColor={ColorPool.getColor(p.colorIndex)}
           title={p.isOnline ? '在线' : '离线'}
           zIndex={150}
           position={{
