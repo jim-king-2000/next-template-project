@@ -6,8 +6,10 @@ export default observer(({ store }) => (
   <Box flex={{ grow: 1, shrink: 1 }}>
     <CanvasPositionMonitor
       // mapKey='99c0746b70009d496380367b4f8f8494'
-      mapKey='ezIVxAYOPRYR8D3iGKsP6jFlqMiuZjTr'
-      mapVendor='RBMap'
+      // mapKey='ezIVxAYOPRYR8D3iGKsP6jFlqMiuZjTr'
+      // mapVendor='RBMap'
+      mapKey='AhDjnlgDaR87L08Y3Uchu87Ky5vfvj8pkIQfLhGZ2yplreOxws6f3XCMHj0tMAR-'
+      mapVendor='RBingMap'
       setFitView={!!store.setFitView}
       onUpdateEnd={() => store.setFitView = false}
       positions={store.positions}
