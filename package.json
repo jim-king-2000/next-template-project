@@ -26,7 +26,7 @@
     "array.prototype.flat": "^1.2.2",
     "babel-plugin-styled-components": "^1.10.6",
     "computed-async-mobx": "^4.2.1",
-    "grommet": "^2.7.10",
+    "grommet": "^2.7.11",
     "isomorphic-unfetch": "^3.0.0",
     "location-backbone-canvas": "git+https://github.com/jim-king-2000/location-backbone-canvas.git",
     "location-backbone-canvas-amap": "git+https://github.com/jim-king-2000/location-backbone-canvas-amap.git",
@@ -44,8 +44,8 @@
     "next-compose-plugins": "^2.2.0",
     "next-transpile-modules": "^2.3.1",
     "pm2": "^4.1.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "socket.io-client": "^2.3.0",
     "styled-components": "^4.4.0"
   }
