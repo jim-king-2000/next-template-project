@@ -12,7 +12,7 @@ const MapCanvas = dynamic(
   { ssr: false }
 );
 const client = new ThingManagementClient();
-const mapType = MapTypes.BINGMAP;
+const mapType = MapTypes.GOOGLEMAP;
 
 export default class extends Component {
   state = new PositionStore(this.props.vehicles, undefined, mapType.coordType);
