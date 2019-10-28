@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grommet, Box } from 'grommet';
+import { Grommet, Box, Select } from 'grommet';
 import dynamic from 'next/dynamic';
 import { ThingManagementClient } from 'location-backbone-sdk';
 import { PositionStore } from 'location-backbone-store';
@@ -12,10 +12,26 @@ const MapCanvas = dynamic(
   { ssr: false }
 );
 const client = new ThingManagementClient();
-const mapType = MapTypes.GOOGLEMAP;
 
 export default class extends Component {
-  state = new PositionStore(this.props.vehicles, undefined, mapType.coordType);
+  state = {
+    mapType: MapTypes[0],
+    store: new PositionStore(
+      this.props.vehicles,
+      undefined,
+      MapTypes[0].coordType
+    ),
+  }
+
+  switchMapType = mapType => {
+    this.setState({
+      mapType,
+      store: new PositionStore(
+        this.props.vehicles,
+        undefined,
+        mapType.coordType),
+    });
+  }
 
   static async getInitialProps() {
     const resp = await client.listThing({ appId, authorization });
@@ -26,11 +42,19 @@ export default class extends Component {
   render = () => (
     <Grommet full plain>
       <Box fill direction='row'>
-        <Sidebar store={this.state} />
+        <Box>
+          <Select
+            options={MapTypes}
+            value={this.state.mapType}
+            labelKey='label'
+            onChange={({ option }) => this.switchMapType(option)}
+          />
+          <Sidebar store={this.state.store} />
+        </Box>
         <MapCanvas
-          store={this.state}
-          mapKey={mapType.mapKey}
-          mapVendor={mapType.mapVendor}
+          store={this.state.store}
+          mapKey={this.state.mapType.mapKey}
+          mapVendor={this.state.mapType.mapVendor}
         />
       </Box>
     </Grommet>
