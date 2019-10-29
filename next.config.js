@@ -16,6 +16,7 @@ module.exports = withPlugins([
       'location-backbone-canvas-amap',
       'location-backbone-canvas-bingmap',
       'location-backbone-canvas-bmap',
+      'location-backbone-canvas-react-map',
       'location-backbone-fe',
       'location-backbone-sdk',
       'location-backbone-store',
