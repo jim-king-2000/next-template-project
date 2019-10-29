@@ -12,14 +12,15 @@ const MapCanvas = dynamic(
   { ssr: false }
 );
 const client = new ThingManagementClient();
+const initMapType = MapTypes[0];
 
 export default class extends Component {
   state = {
-    mapType: MapTypes[0],
+    mapType: initMapType,
     store: new PositionStore(
       this.props.vehicles,
       undefined,
-      MapTypes[0].coordType
+      initMapType.coordType
     ),
   }
 
