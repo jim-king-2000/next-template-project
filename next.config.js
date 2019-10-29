@@ -13,9 +13,6 @@ module.exports = withPlugins([
   [withTM, {
     transpileModules: [
       'location-backbone-canvas',
-      'location-backbone-canvas-amap',
-      'location-backbone-canvas-bingmap',
-      'location-backbone-canvas-bmap',
       'location-backbone-canvas-react-map',
       'location-backbone-fe',
       'location-backbone-sdk',
