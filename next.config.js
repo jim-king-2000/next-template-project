@@ -15,9 +15,9 @@ module.exports = withPlugins([
       'location-backbone-canvas',
       'location-backbone-canvas-react-map',
       'location-backbone-fe',
+      'location-backbone-react-map',
       'location-backbone-sdk',
       'location-backbone-store',
-      'location-backbone-react-map',
     ]
   }],
 ]);
