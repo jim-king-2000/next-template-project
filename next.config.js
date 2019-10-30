@@ -6,7 +6,7 @@ if (typeof require !== "undefined") {
   require.extensions[".css"] = () => {};
  }
  
-const withCSS = require('@zeit/next-css')
+const withCSS = require('@zeit/next-css');
 
 module.exports = withPlugins([
   [withCSS()],
