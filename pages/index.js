@@ -41,22 +41,23 @@ export default class extends Component {
   }
 
   render() {
+    const { mapType, store } = this.state;
     return (
       <Grommet full plain>
         <Box fill direction='row'>
           <Box>
             <Select
               options={MapTypes}
-              value={this.state.mapType}
+              value={mapType}
               labelKey='label'
               onChange={({ option }) => this.switchMapType(option)}
             />
-            <Sidebar store={this.state.store} />
+            <Sidebar store={store} />
           </Box>
           <MapCanvas
-            store={this.state.store}
-            mapKey={this.state.mapType.mapKey}
-            mapVendor={this.state.mapType.mapVendor}
+            store={store}
+            mapKey={mapType.mapKey}
+            mapVendor={mapType.mapVendor}
           />
         </Box>
       </Grommet>
